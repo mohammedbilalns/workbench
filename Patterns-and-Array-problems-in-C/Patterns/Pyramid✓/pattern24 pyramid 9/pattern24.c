@@ -1,0 +1,21 @@
+#include "stdio.h"
+
+int main(){
+
+    int n = 4;
+    for(int i=1;i<=n;i++){
+        int k=65;
+        for(int j=1;j<=n+i-1;j++){
+            if(j>=n-i+1){
+                printf("%c",k);
+                k+= j<n ? 1 : -1;
+            }else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    
+    return 0;
+}

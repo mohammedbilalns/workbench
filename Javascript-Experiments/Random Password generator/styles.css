@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+    
+}
+input{
+    margin-top: 10px;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: black;
+   
+}
+button{
+    background-color: rgb(20, 176, 176);
+    border-radius: 10px;
+    border: none;
+    padding: 5px 5px;
+    margin-top: 5px;
+    color: whitesmoke;
+}
+button:hover{
+    background-color: rgb(29, 109, 109);
+}
+button:active{
+    background-color: rgb(3, 58, 66);
+}

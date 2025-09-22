@@ -1,0 +1,88 @@
+class Node {
+	constructor(value){
+		this.value = value 
+		this.next  = null 
+		this.prev = null 
+	}
+}
+
+class LinkedList {
+	constructor(){
+		this.head = null 
+		this.size = 0 
+	}
+
+	prepend(value ){
+
+		const node = new Node(value)
+		if(this.size == 0 ){
+			this.head = node 
+		}else {
+			this.head.prev = node 
+			node.next = this.head 
+			this.head = node 
+		}	
+		this.size++ 
+	}
+
+	removeFromFront(){
+		
+		if(this.size == 0 ){
+			return 
+		}
+
+		let removed 
+		if (this.size == 1 ){
+			removed = this.head 
+			this.head = null 
+		}else {
+
+			removed = this.head	
+			this.head = this.head.next
+			this.head.prev = null 
+		}
+
+		this.size-- 
+		return removed 
+	}
+
+	reverse(){
+		let prev = null 
+		let curr = this.head 
+
+		while(curr ){
+			let nextNode = curr.next 
+			
+			curr.next = prev 
+			curr.prev = nextNode 
+
+			prev = curr 
+			curr = nextNode 
+		}
+
+		this.head = prev 
+	}
+
+	
+
+	print(){
+		let curr = this.head 
+		let str = ""
+		
+		while(curr){
+			
+			str+= curr.value + " <-> "
+			curr = curr.next 
+		}
+
+		console.log(str)
+	}
+}
+
+
+const list = new LinkedList()
+list.prepend(23)
+list.prepend(234)
+list.print()
+list.reverse()
+list.print()

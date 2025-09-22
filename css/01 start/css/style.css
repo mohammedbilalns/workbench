@@ -1,0 +1,13 @@
+.red {
+	color: red;
+}
+* {
+	 font-family: monospace;
+	 }
+ h1 , p {
+	 color: red;
+ }
+
+.highlight {
+	background-color: yellowgreen;
+}

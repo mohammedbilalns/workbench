@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .done {
+        color: darkseagreen;
+        text-decoration: line-through solid black 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Instructions</p>
+
+    <ul id="todo-list">
+      <li>Eat</li>
+      <li>Sleep</li>
+      <li>Repeat</li>
+    </ul>
+
+    <script>
+      // const listItems = document.querySelectorAll("li");
+
+      // function toggleDone(e) {
+      //   e.target.classList.toggle("done");
+      // }
+
+      // listItems.forEach((item) => {
+      //   item.addEventListener("click", toggleDone);
+      // });
+      // with event delegation
+      const ul = document.getElementById("todo-list");
+
+      ul.addEventListener("click", (e) => {
+        if (e.target.tagName == "LI") {
+          e.target.classList.toggle("done");
+        }
+      });
+    </script>
+  </body>
+</html>

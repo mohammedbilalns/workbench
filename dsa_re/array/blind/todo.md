@@ -1,0 +1,6 @@
+- best time to buy and sell stock 
+- maximum product subarray 
+- find minium in rotated sorted array 
+- search in rotated sorted array 
+- 3 sum 
+- contains with most water 

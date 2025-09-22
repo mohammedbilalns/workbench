@@ -1,0 +1,6 @@
+- Buy and sell stock (sliding window approach)
+- Subarray with max elements in increasing order
+- Longest substring without repeating characters
+- Find largest substring without vowels
+- Find longest consecutive repeating characters
+- String permutations (e.g., find all anagrams in a string)

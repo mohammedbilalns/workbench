@@ -1,0 +1,6 @@
+- Find two numbers that sum to a target value in a sorted array
+- Reverse a string using two pointers
+- Reverse each word in a string using two pointers
+- Palindrome checking (expand around center)
+- Longest substring palindrome (expand around center)
+- Remove duplicates from a sorted array or linked list
