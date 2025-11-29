@@ -1,4 +1,3 @@
-var a = 10;
-var b = "sfsdf";
-a = "fsdf";
-console.log(a + b);
+var user = { name: "dfskljnsdf", age: 43 };
+console.log("fsdkljnfds");
+console.log(user.name);

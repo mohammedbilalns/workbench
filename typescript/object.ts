@@ -13,7 +13,6 @@ function createCourse():{name:string, price: number}{
 	return {name: "reactjs", price:399 }
 }
 
-let a = 10 
 
 
 export {}

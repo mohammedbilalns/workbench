@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+  </head>
+  <body>
+
+    <input type="text" id="nameInput" >
+    <button type="submit" id="addBtn" >Submit</button>
+
+    <ul id="list">
+      <template id="user-row">
+        <li class="user">
+          <span class="name"></>
+        </li>
+      </template>
+    </ul>
+
+    <script>
+    const list = document.getElementById("list")
+    const input = document.getElementById("nameInput")
+
+    document.getElementById("addBtn").onclick = () => {
+
+      // Clone the <template> content (deep clone = true)
+      // This creates a copy of the <li> structure inside the template
+      const clone = document.getElementById("user-row").content.cloneNode(true)
+
+      // Update the cloned element: set the <span> text to whatever user typed
+      clone.querySelector(".name").textContent = input.value
+
+      // Append the filled clone to the list
+      list.appendChild(clone)
+
+      input.value = "" 
+
+    }
+
+
+    </script>
+  </body>
+</html>
