@@ -1,5 +1,4 @@
 function ascending(arr){
-    
     for(let i= 0 ; i<arr.length ; i++){
         let elementToInsert = arr[i]
         let j = i-1 

@@ -17,4 +17,4 @@ function ascending(arr){
 
 
 
-console.log(ascending([8,1,9,3,4,6,4,2]))
+console.log(ascending(1,5,3,2,6,3,4,9,10]))

@@ -35,6 +35,21 @@ function removeDuplicatesFromArray<T>(arr:T[]){
 	}
 }
 
+// linear solution 
+function removeDuplicatesLinear<T>(arr: T[]): T[]{
+	const seen = new Set()
+	const res : T[] = []
+
+	for(let elem of arr){
+		if(!seen.has(elem)){
+			res.push(elem)
+			seen.add(elem)
+		}
+	}
+	return res 
+
+}
+
 removeDuplicatesFromArray(arr)
 
 

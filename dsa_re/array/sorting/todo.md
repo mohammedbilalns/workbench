@@ -1,7 +1,0 @@
-- bubble 
-- selection 
-- insertion 
-- merge 
-- quick 
-- heap 
-- shell 
