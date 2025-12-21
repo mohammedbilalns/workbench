@@ -3,7 +3,6 @@ class MinHeap{
         this.heap = []
     }
 
-
     getLeftChildIndex(index){
         return 2*index +1 
     }

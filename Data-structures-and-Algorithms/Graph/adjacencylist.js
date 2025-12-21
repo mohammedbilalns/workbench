@@ -24,7 +24,7 @@ class Graph {
   hasEdge(node1, node2) {
     return (
       this.adjacencyList[node1].has(node2) &&
-      this.adjacencyList[node2].has(node1)
+        this.adjacencyList[node2].has(node1)
     );
   }
   // Remove an edge from the graph
@@ -100,7 +100,7 @@ class Graph {
           if (helperDfs(neighbor, node)) {
             return true;
           }
-        } else if (neighbor !== parent) {
+        }else if (neighbor !== parent) {
           return true;
         }
       }
