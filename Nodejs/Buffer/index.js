@@ -26,3 +26,5 @@ const concatBuff = Buffer.concat([buffOne, buffFromString, buffFromArray])
 
 console.log(concatBuff.toString())
 console.log(concatBuff.toJSON())
+
+
