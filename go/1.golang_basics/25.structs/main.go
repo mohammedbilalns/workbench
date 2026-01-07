@@ -31,3 +31,7 @@ func main(){
 	fmt.Println(u2)
 
 }
+
+type TestRequest struct {
+	Name string `json:"name"`
+}
