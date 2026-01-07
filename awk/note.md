@@ -1,0 +1,2 @@
+- print file content - ` awk  '{print}' sample.txt`
+- 
