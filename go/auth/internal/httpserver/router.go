@@ -1,8 +1,14 @@
 package httpserver
 
-import "github.com/gin-gonic/gin"
+import (
+	"go-auth/internal/app"
+	"go-auth/internal/middleware"
+	"go-auth/internal/user"
+	"net/http"
+	"github.com/gin-gonic/gin"
+)
 
-func NewRouter() *gin.Engine {
+func NewRouter(a *app.App) *gin.Engine {
 
 	r := gin.New()
 
@@ -11,5 +17,49 @@ func NewRouter() *gin.Engine {
 	r.Use(gin.Recovery())
 
 	r.GET("/health", health)
+
+	userRepo := user.NewRepo(a.DB)
+
+	userSvc := user.NewService(userRepo,a.Config.JWTSecret)
+
+	userHandler := user.NewHandler(userSvc)
+
+	// public routes 
+	r.POST("/register", userHandler.Register)
+	r.POST("/login", userHandler.Login)
+
+
+	api := r.Group("/api")
+
+	api.Use(middleware.AuthRequired(a.Config.JWTSecret))
+
+	api.GET("/files", func (c * gin.Context){
+
+		userId , _ := middleware.GetUserId(c)
+		c.JSON(http.StatusOK, gin.H{
+			"ok": true,
+			"userId":userId,
+			"files": []any{},
+		})
+	})
+
+	api.GET("/products", func (c * gin.Context){
+		c.JSON(http.StatusOK, gin.H{
+			"ok": true,
+			"files": []any{},
+		})
+	})
+
+	admin := api.Group("/admin")
+
+	api.Use(middleware.RequireAdmin())
+
+	admin.GET("/restricted", func(ctx *gin.Context) {
+		role, _ := middleware.GetRole(ctx)
+		ctx.JSON(http.StatusOK, gin.H{
+			"ok":true,
+			"role":role,
+		})
+	})
 	return r 
 }

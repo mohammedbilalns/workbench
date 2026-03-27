@@ -1,0 +1,3 @@
+- swap the middle element of a linked list if it has two middle elements 
+- find the middle element of a linked list and if there is two middle elements find the larger of them 
+- Swap the middle elements of a doubly linked list 

@@ -1,0 +1,5 @@
+Circuitbreaker operates with three distinct states
+-  **closed** - This is the ideal state, where the circuit freely conducts requests, allowing application to seamlessly interact with external services.
+every successful interaction reinforces this state, strengthening the trust between the applicataion and the dependency 
+- **open** - If failures exceed a predetermined threshold, the circuit flips open,severing th econnection. This drastic measure might seem harsh, but it servers a critical purpose. By cutting off the flow of requests, the open state prevents furthere cascading failures, protecting the apli8cation from succumbint to a full blown outage  
+- **Half-Open** - State between closed and open. After a set period of time, the circuit catiosly creeps into a half open state. A single request is sent through. if this request returns with success, it signals a potensital recovery and the circuit happily swings back to the closed state, thereby restoring tnormalcy, if the request fails, the circuit flips open again, and the application is protected from further failures.
