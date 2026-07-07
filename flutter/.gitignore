@@ -1,0 +1,54 @@
+# ==============================================================================
+# Flutter / Dart Projects Git Ignore (Recursive for all subfolders)
+# ==============================================================================
+
+# OS Files
+**/.DS_Store
+**/Thumbs.db
+
+# Logs
+**/*.log
+
+# IntelliJ / Android Studio related
+**/.idea/
+**/*.iml
+**/*.ipr
+**/*.iws
+
+# Visual Studio Code related (Optional: uncomment to ignore)
+# **/.vscode/
+
+# Flutter / Dart / Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/.pub-cache/
+**/.pub/
+**/build/
+**/coverage/
+
+# Android Studio will place build artifacts here
+**/android/.gradle/
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+**/android/local.properties
+
+# iOS/macOS specific
+**/ios/.symlinks/
+**/macos/.symlinks/
+**/.sandbox/
+**/*.xcworkspace/xcuserdata/
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+**/macos/Flutter/Generated.xcconfig
+**/macos/Flutter/flutter_export_environment.sh
+
+# Windows specific
+**/windows/flutter/ephemeral/
+
+# Linux specific
+**/linux/flutter/ephemeral/
