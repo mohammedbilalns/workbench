@@ -1,0 +1,32 @@
+# Ignore Go compiled binaries (files without extensions)
+# First, ignore everything recursively in the go directory
+**/*
+
+# Allow all directories (necessary so git can traverse them)
+!**/
+
+# Allow gitignore files
+!**/.gitignore
+
+# Allow specific source/config file extensions
+!**/*.go
+!**/*.mod
+!**/*.sum
+!**/*.toml
+!**/*.md
+!**/*.tmpl
+!**/*.html
+!**/*.css
+!**/*.js
+!**/*.png
+!**/*.ico
+!**/*.json
+!**/*.txt
+!**/*.sh
+
+# Allow specific files without extensions
+!**/Makefile
+!**/Dockerfile
+!**/LICENSE
+!**/README
+!**/go.work
