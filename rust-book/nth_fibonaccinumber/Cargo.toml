@@ -1,0 +1,6 @@
+[package]
+name = "nth_fibonaccinumber"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

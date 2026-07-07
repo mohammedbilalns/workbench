@@ -1,0 +1,6 @@
+[package]
+name = "central_tendancies"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
