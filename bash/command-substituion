@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+whoami
+# substituted command will be run on another subshell 
+echo $(whoami)
+# Newer syntax which does not require subshell
+echo ${ whoami; }
+echo "$(echo $(whoami))"
+
+my-func() {
+  echo hi 
+}
+
+thing=$(my-func)
+echo "thing is $thing"

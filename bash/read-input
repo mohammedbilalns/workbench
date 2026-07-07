@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# -r is for marking it as plain string ( avoid escaping chars like newline )
+# read only reads one line 
+
+while read -r line || [[ -n $line ]]; do
+  echo "read line is $line"
+done

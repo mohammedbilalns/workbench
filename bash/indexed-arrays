@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+array=(foo bar baz) # when we use the () bash automatically inferred it as indexed array 
+declare -a anotherarray=(foo bar baz) # Explicitely tell to declare it as an array 
+echo "$array"  # Only returns the first index of the array 
+
+echo "${array[0]}" # Access element at index 0 , supports negative index too 
+
+index=2 
+echo "idx: ${array[$index]}"
+
+echo "Array: ${array[*]}" # prints the whole array but it will not work with loops 
+echo "Array: ${array[@]}" # prints the whole array but iteration via loop works here  
+
+newArray=$array  # New array only will have the first element  
+secondArray=( "${array[@]}" additional elements ) 
+secondArray+=(dsfsd fsdfsd fsdf) # adding additional elements into the array  
+
+echo "New Array: ${#newArray[@]}"  # length of the array 
+

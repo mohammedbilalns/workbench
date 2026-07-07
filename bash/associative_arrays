@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+declare -A arr 
+
+arr[fsdf]=32
+arr[sdf]=32
+
+echo "${arr[fsdf]}"
+
+# loop over the values
+echo "${arr[*]}"
+echo "${arr[@]}"
+
+# loop over the keys
+echo "${!arr[@]}"
+
+for key in "${!arr[@]}"; do
+  value="${arr[$key]}"
+  echo "$key => $value"
+done
+

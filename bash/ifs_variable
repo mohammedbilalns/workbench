@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+array=(a b c)
+
+IFS=,
+
+echo "array is: ${array[*]}"

@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+s=$1
+
+case "$s" in
+  bilal)
+    echo hi bilal
+    ;;
+  agosh)
+    echo fsdfds fsdsd
+    ;&          # ;& is for always fall through (checks the next condtion even if this condition passes ) 
+  sdfs)
+    echo fsdfdsf
+    ;;&       # checks all the conditions  
+  *)            # Default case 
+    echo "fsdfds"
+esac

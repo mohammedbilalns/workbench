@@ -1,0 +1,30 @@
+#!/usr/bin/env bash 
+
+a=2
+b="2"
+
+if [[ $a == $b ]]; then
+  echo "a and b are the same"
+fi
+
+if [[ -f file.txt ]]; then
+  echo "file.txt exists and is a file"
+fi
+
+
+if ls; then
+  echo "ls worked"
+fi 
+
+while [[ -f file.txt ]]; do
+  echo "file.txt exists and is a file"
+  sleep 1 
+done 
+
+until [[ -f file.txt ]]; do # until is the opposite of while 
+  echo "file.txt does not exists"
+  sleep 1 
+done 
+
+echo "file  is gone "
+

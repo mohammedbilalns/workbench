@@ -1,0 +1,128 @@
+# ==========================================================
+# OS Files
+# ==========================================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ==========================================================
+# Editor / IDE
+# ==========================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+
+# ==========================================================
+# Logs
+# ==========================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==========================================================
+# Environment
+# ==========================================================
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# ==========================================================
+# JavaScript / Node.js
+# ==========================================================
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+dist/
+build/
+coverage/
+.next/
+.nuxt/
+.svelte-kit/
+.parcel-cache/
+.turbo/
+.cache/
+.eslintcache
+vite.svg
+
+# Package managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# Uncomment if publishing a library
+# !package-lock.json
+# !pnpm-lock.yaml
+# !yarn.lock
+
+# ==========================================================
+# TypeScript
+# ==========================================================
+*.tsbuildinfo
+
+# ==========================================================
+# Go
+# ==========================================================
+bin/
+vendor/
+cover.out
+coverage.out
+*.test
+*.prof
+*.pprof
+
+# Go workspace
+go.work.sum
+
+# ==========================================================
+# Rust
+# ==========================================================
+target/
+
+# Ignore Cargo.lock for libraries.
+# Keep it for applications by removing the next line.
+Cargo.lock
+
+# ==========================================================
+# Testing
+# ==========================================================
+.nyc_output/
+test-results/
+playwright-report/
+
+# ==========================================================
+# Temporary Files
+# ==========================================================
+tmp/
+temp/
+*.pid
+*.seed
+
+# ==========================================================
+# Archives
+# ==========================================================
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# ==========================================================
+# Local Configuration
+# ==========================================================
+.local/
+.localrc

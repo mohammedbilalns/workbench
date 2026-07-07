@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+for name in foo bar baz; do
+  echo "Hello, $name!"
+done
+
+for thing in {a..f}; do # expands a to f 
+  echo "Hello, $thing!"
+done 
+
+# Output:
+# Hello, foo!
+# Hello, bar!
+# Hello, baz!
+
+for ((i=0; i<3; i++)); do
+  echo "Hello, World!"
+done

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+res=$(( 2 + 2))
+echo $res
+
+# using variables 
+echo $(( a + b))
+
+a=32
+b=312
+# ternery 
+max=$(( a > b ? a : b ))
+echo $max

@@ -91,7 +91,4 @@ class maxHeap{
     
 }
 
-
-
-
 console.log(topKFrequent([1,5,7,8,3,5,3,2,6,2,4,2,4,6,2,5,3,2,4]))
