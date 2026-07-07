@@ -1,0 +1,3 @@
+module typeconversino
+
+go 1.24.1
