@@ -1,0 +1,36 @@
+
+Machine Learning Introduction
+
+Machine learning is a branch of artificial intelligence (AI) that enables
+computers to learn patterns from data without being explicitly programmed for
+every task.
+
+Instead of following fixed rules, machine learning models are trained on
+datasets to make predictions or decisions. The more high-quality data a model
+is trained on, the better it can generalize to unseen examples.
+
+Machine learning is commonly divided into three categories:
+
+- Supervised Learning: Models learn from labeled data. Examples include spam
+  detection, house price prediction, and image classification.
+
+- Unsupervised Learning: Models discover hidden patterns in unlabeled data.
+  Common tasks include clustering and dimensionality reduction.
+
+- Reinforcement Learning: An agent learns by interacting with an environment
+  and receiving rewards or penalties for its actions.
+
+Popular machine learning libraries in Python include scikit-learn, TensorFlow,
+PyTorch, and XGBoost.
+
+Typical machine learning workflow:
+
+1. Collect data.
+2. Clean and preprocess the data.
+3. Select and train a model.
+4. Evaluate the model using test data.
+5. Deploy the model for real-world use.
+
+Machine learning powers recommendation systems, fraud detection, autonomous
+vehicles, medical diagnosis, speech recognition, and natural language
+processing applications like ChatGPT.
