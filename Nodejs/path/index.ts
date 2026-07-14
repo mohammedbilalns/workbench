@@ -1,8 +1,10 @@
 import path, { extname } from "node:path"
 
+// uses proper seperators based on the os 
 const p = path.join("/home", "bilalnsmuhammed", "Downloads")
+
 const res = path.resolve("../../../", "Downloads")
-const base = path.basename("/home/bilalnsmuhammed/Downloads")
+const base = path.basename("/home/bilalnsmuhammed/Downloads")// last part 
 const dir = path.dirname("/home/bilalnsmuhammed/Downloads/")
 const extName = path.extname("/home/bilalnsmuhammed/Downloads/chatgpt.png")
 const parsed = path.parse("/home/bilalnsmuhammed/Downloads/chatgpt.png")

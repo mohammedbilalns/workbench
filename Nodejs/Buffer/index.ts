@@ -1,4 +1,5 @@
 // const buffer = new Buffer.from("fsdlkjnfsdn  ")
+import {Buffer} from "node:buffer"
 
 
 // buffer.write("Code")
@@ -11,16 +12,16 @@
 // console.log(buf.toString())
 
 
-const buffOne  = Buffer.alloc(10)
+const buffOne  = Buffer.alloc(10) // buffer with fixed  length 
 console.log(buffOne)
 
-const buffFromString = Buffer.from("Hello World")
+const buffFromString = Buffer.from("Hello World") // buffer from normal string 
 console.log(buffFromString)
 
 const buffFromArray = Buffer.from([1,2,3,4,5])
 console.log(buffFromArray)
 buffOne.write("Hello")
-console.log(buffOne.toString())
+console.log(buffOne.toString("utf8"))
 
 const concatBuff = Buffer.concat([buffOne, buffFromString, buffFromArray])  
 
