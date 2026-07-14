@@ -1,13 +1,15 @@
-const http = require('http');
+import { IncomingMessage, ServerResponse } from "node:http";
+import http from "node:http";
 
-const server = http.createServer((req, res) => {
+
+const server = http.createServer((req : IncomingMessage, res: ServerResponse) => {
     
     http.get("http://jsonplaceholder.typicode.com/todos/1", (res)=>{
         
         console.log(res.statusCode)
-        let responseBody 
+        let responseBody :string = ""
 
-        res.on("data", (incomingData)=>{
+        res.on("data", (incomingData : Buffer)=>{
             responseBody += incomingData
         })
 

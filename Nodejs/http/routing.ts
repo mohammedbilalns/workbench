@@ -1,7 +1,6 @@
-const http = require("node:http");
-const fs = require("node:fs");
+import http, { IncomingMessage, ServerResponse } from "node:http";
 
-const server = http.createServer((req, res) => {
+const server = http.createServer((req : IncomingMessage, res : ServerResponse) => {
   if (req.url === "/") {
     res.writeHead(200, { "content-type": "text/plain" });
     res.end("Home Page");
@@ -17,7 +16,7 @@ const server = http.createServer((req, res) => {
       }),
     );
   } else {
-    res.WriteHead(404, {
+    res.writeHead(404, {
       "content-type": "application/json",
     });
     res.end("Page not found");
