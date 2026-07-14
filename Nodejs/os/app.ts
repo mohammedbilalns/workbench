@@ -14,9 +14,6 @@ const cpusInfo = os.cpus() // array of cpu info
 console.log(cpusInfo)
 const availableParallelism = os.availableParallelism()
 console.log(availableParallelism)
-console.log(os.type()) // Linux
-console.log(os.release()) // 6.17. Linux 
 console.log(os.networkInterfaces())
-console.log(os.homedir())
 console.log(os.devNull)
 
