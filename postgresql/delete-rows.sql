@@ -1,0 +1,4 @@
+
+
+DELETE FROM products 
+WHERE sku="ELEC-TEMP-332"

@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: sfdsf
+      # load the db password from .env 
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - pdgata : "/var/lib/postgres/data"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -u taskuser"]
+  api:
+    build: ./backend
+    ports: ["8000:8000"]
+    environment:
+      DATBASE_URL: postgres://db.323/taskdb
+    depends_on:
+      db: {condition: service_healthy}
+    networks: [appnet]
+  frontend:
+    build: ./frontend
+    ports: ["3000:3000"]
+    depends_on: [api]
+    networks : [appnet]
+networks:
+  appnet
+volumes:
+  pgdata
+
